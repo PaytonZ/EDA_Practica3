@@ -1,4 +1,6 @@
 #include "pareja.h"
+#ifndef FAUX_H
+#define FAUX_H
 
 // Dada una lista con dos o tres puntos , devuelve los dos puntos mas
 // cercanos , su distancia y una lista con los puntos ordenados
@@ -26,7 +28,7 @@ Solucion eligeMinimo(const Solucion &s1, const Solucion &s2,const Punto &p1, con
 
 
 //Rellena una lista con N puntos aleatorios
-void generarListaDePuntos(Lista<Punto> &l,int n);
+Lista<Punto> generarListaDePuntos(int n);
 
 //Imprime una lista de puntos de forma adecuada
 
@@ -39,3 +41,4 @@ Solucion parMasCercanoFuerzaBruta(Lista<Punto> &l);
 //Funcion que muestra un punto de forma adecuada  -- Auxiliar
 void imprimeUnicoPunto(const Punto &p1);
 
+#endif

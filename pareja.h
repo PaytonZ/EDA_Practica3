@@ -9,17 +9,19 @@ typedef struct
     double y;
 } Punto;
 
-typedef struct{
+typedef struct
+{
     Punto p1;
     Punto p2;
-}Pareja;
+} Pareja;
 
 //typedef Pareja<double,double> Punto;
-typedef struct {
-Punto p1;
-Punto p2;
-double delta;
-Lista<Punto> lista;
+typedef struct
+{
+    Punto p1;
+    Punto p2;
+    double delta;
+    Lista<Punto> lista;
 } Solucion;
 
 #endif

@@ -26,15 +26,17 @@ void recorreBanda(Lista<Punto> &l, Punto &p1, Punto &p2, double &d);
 Solucion eligeMinimo(const Solucion &s1, const Solucion &s2,const Punto &p1, const Punto &p2, double d);
 
 
-void generarListaDePuntos(Lista<Punto> &l,int n)
+Lista<Punto> generarListaDePuntos(int n)
 {
+    Lista<Punto> resultado;
     Punto p1;
     for(int i=0; i < n ; i++)
     {
         p1.x=(rand() % 100000) / 100.0f;
         p1.y=(rand() % 100000) / 100.0f;
-        l.ponDr(p1);
+        resultado.ponDr(p1);
     }
+    return resultado;
 }
 void imprimeListadePuntos(Lista<Punto> &l)
 {
@@ -50,7 +52,7 @@ void imprimeListadePuntos(Lista<Punto> &l)
 
 void imprimeUnicoPunto(const Punto &p1)
 {
-      cout << "(" << p1.x << "," << p1.y << ")"<< endl;
+    cout << "(" << p1.x << "," << p1.y << ")"<< endl;
 }
 
 Solucion parMasCercanoFuerzaBruta(Lista<Punto> &l)
