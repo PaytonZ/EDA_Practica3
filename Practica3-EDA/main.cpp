@@ -1,7 +1,8 @@
 #include <string>
 #include "pareja.h"
 #include "faux.h"
-#include "TADs/lista.h"
+//#include "TADs/lista.h"
+#include "Lista.h"
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>

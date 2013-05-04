@@ -2,7 +2,8 @@
 #include <string>
 #include "pareja.h"
 #include "faux.h"
-#include "TADs/lista.h"
+//#include "TADs/lista.h"
+#include "Lista.h"
 #include<stdlib.h>
 #include<time.h>
 #include <iostream>
@@ -38,6 +39,7 @@ Lista<Punto> generarListaDePuntos(int n)
     }
     return resultado;
 }
+
 void imprimeListadePuntos(Lista<Punto> &l)
 {
     Lista<Punto>::Iterador it = l.principio();
