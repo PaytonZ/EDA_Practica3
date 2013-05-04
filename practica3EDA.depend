@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1367669357 source:d:\mis documentos\github\practica3eda\main.cpp
+1367669538 source:d:\mis documentos\github\practica3eda\main.cpp
 	<string>
 	"pareja.h"
 	"faux.h"
@@ -22,7 +22,7 @@
 1367669357 d:\mis documentos\github\practica3eda\faux.h
 	"pareja.h"
 
-1367669377 source:d:\mis documentos\github\practica3eda\faux.cpp
+1367669587 source:d:\mis documentos\github\practica3eda\faux.cpp
 	<string>
 	"pareja.h"
 	"faux.h"

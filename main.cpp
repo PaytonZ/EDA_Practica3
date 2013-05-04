@@ -18,6 +18,7 @@ int main()
     imprimeListadePuntos(lista_de_puntos);
     s1 = parMasCercanoFuerzaBruta(lista_de_puntos);
 
+    cout << "-----" << endl;
     imprimeUnicoPunto(s1.p1);
     imprimeUnicoPunto(s1.p2);
     cout << s1.delta << endl;

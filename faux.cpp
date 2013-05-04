@@ -68,7 +68,7 @@ Solucion parMasCercanoFuerzaBruta(Lista<Punto> &l)
             p1aux= pow(p1.x-p2.x,2);
             p2aux= pow(p1.y-p2.y,2);
             aux= sqrt(p1aux+p2aux);
-            if(aux!=distancia_minima )
+            if(aux<distancia_minima )
             {
                 distancia_minima=aux;
                 s1.p1=p1;
