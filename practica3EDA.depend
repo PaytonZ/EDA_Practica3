@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1367667242 source:d:\mis documentos\github\practica3eda\main.cpp
+	<string>
+	"pareja.h"
+	"faux.h"
+	"TADs/lista.h"
+	<stdlib.h>
+	<time.h>
+	<iostream>
+
+1367666828 d:\mis documentos\github\practica3eda\pareja.h
+	"TADs/lista.h"
+
+1333983226 d:\mis documentos\github\practica3eda\tads\lista.h
+	"Excepciones.h"
+	<cassert>
+
+1335109112 d:\mis documentos\github\practica3eda\tads\excepciones.h
+	<string>
+	<iosfwd>
+
+1367666835 d:\mis documentos\github\practica3eda\faux.h
+	"pareja.h"
+
+1367667167 source:d:\mis documentos\github\practica3eda\faux.cpp
+	"faux.h"
+	"TADs/lista.h"
+	<stdlib.h>
+	<time.h>
+

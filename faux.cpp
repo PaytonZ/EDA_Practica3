@@ -19,13 +19,13 @@ void recorreBanda(Lista<Punto> &l, Punto &p1, Punto &p2, double &d);
 Solucion eligeMinimo(const Solucion &s1, const Solucion &s2,const Punto &p1, const Punto &p2, double d);
 
 
-void generarListaDePuntos(Lista<Puntos> &l,int n)
+void generarListaDePuntos(Lista<Punto> &l,int n)
 {
     Punto p1;
     for(int i=0; i < n ; i++)
     {
-        p1.x=(rand() % 100000) / 100.0d;
-        p1.y=(rand() % 100000) / 100.0d;
-        l.pondr(p1);
+        p1.x=(rand() % 100000) / 100.0f;
+        p1.y=(rand() % 100000) / 100.0f;
+        l.ponDr(p1);
     }
 }
