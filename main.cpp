@@ -23,7 +23,7 @@ int main()
     imprimeUnicoPunto(s1.p2);
     cout << s1.delta << endl;
 
- mergeSort(lista_de_puntos);
+    mergeSort(lista_de_puntos);
 
     return 0;
 }

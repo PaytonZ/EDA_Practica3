@@ -32,7 +32,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="TADs\Lista.h" />
+		<Unit filename="faux.cpp" />
+		<Unit filename="faux.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="mezcla.h" />
+		<Unit filename="pareja.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

@@ -86,17 +86,32 @@ void mergeSort(Lista<Punto> &lista)
 void mergeSort(Lista<Punto> &lista,int a, int b)
 {
 
+    int m;
+    //cout << "a---" << a << "    b---" << b;
+    if (a<b)
+    {
 
+        m = (a+b) / 2;
+        // cout << "     m---" << m << endl;
+        Lista<Punto> lista1, lista2;
+        lista1=partirLista(lista,a,m);
+        mergeSort( lista1, a, m );
+        lista2=partirLista(lista,m+1,b);
+        mergeSort( lista, m+1, b );
+        //lista=mezcla( lista1, lista2,menorY );
+    }
 
 }
 // Esta funcion devuelve la lista entre los parametros a y b
 Lista<Punto> partirLista(Lista<Punto> &original, int a , int b)
 {
+    cout << "Estoy creando una lista desde " << a << "hasta " << b << endl;
     Lista<Punto> lista_nueva;
-    for(int i=a; i < b; i ++)
+    for(int i=a; i <=b; i ++)
     {
         lista_nueva.ponDr(original.elem(i));
     }
+    assert(lista_nueva.numElems()>0);
     return lista_nueva;
 }
 
