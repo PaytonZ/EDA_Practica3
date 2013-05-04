@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FBBF668F17355D0E002AD31D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FBBF668E17355D0E002AD31D /* main.cpp */; };
 		FBBF669117355D0E002AD31D /* Practica3_EDA.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = FBBF669017355D0E002AD31D /* Practica3_EDA.1 */; };
+		FBBF669817355F15002AD31D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FBBF669717355F15002AD31D /* main.cpp */; };
+		FBBF66A917355F8B002AD31D /* faux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FBBF66A817355F8B002AD31D /* faux.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +27,23 @@
 
 /* Begin PBXFileReference section */
 		FBBF668B17355D0E002AD31D /* Practica3-EDA */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Practica3-EDA"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FBBF668E17355D0E002AD31D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		FBBF669017355D0E002AD31D /* Practica3_EDA.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Practica3_EDA.1; sourceTree = "<group>"; };
+		FBBF669717355F15002AD31D /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		FBBF669A17355F70002AD31D /* Arbin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arbin.h; sourceTree = "<group>"; };
+		FBBF669B17355F70002AD31D /* ArbinConCopias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArbinConCopias.h; sourceTree = "<group>"; };
+		FBBF669C17355F70002AD31D /* Arbus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arbus.h; sourceTree = "<group>"; };
+		FBBF669D17355F70002AD31D /* Cola.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cola.h; sourceTree = "<group>"; };
+		FBBF669E17355F70002AD31D /* DCola.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCola.h; sourceTree = "<group>"; };
+		FBBF669F17355F70002AD31D /* Excepciones.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Excepciones.h; sourceTree = "<group>"; };
+		FBBF66A017355F70002AD31D /* Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hash.h; sourceTree = "<group>"; };
+		FBBF66A117355F70002AD31D /* Lista.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lista.h; sourceTree = "<group>"; };
+		FBBF66A217355F70002AD31D /* Pila.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pila.h; sourceTree = "<group>"; };
+		FBBF66A317355F70002AD31D /* PilaLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PilaLE.h; sourceTree = "<group>"; };
+		FBBF66A417355F70002AD31D /* Tabla.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tabla.h; sourceTree = "<group>"; };
+		FBBF66A517355F7E002AD31D /* faux.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = faux.h; sourceTree = "<group>"; };
+		FBBF66A617355F7E002AD31D /* mezcla.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mezcla.h; sourceTree = "<group>"; };
+		FBBF66A717355F7E002AD31D /* pareja.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pareja.h; sourceTree = "<group>"; };
+		FBBF66A817355F8B002AD31D /* faux.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = faux.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +76,33 @@
 		FBBF668D17355D0E002AD31D /* Practica3-EDA */ = {
 			isa = PBXGroup;
 			children = (
-				FBBF668E17355D0E002AD31D /* main.cpp */,
+				FBBF669917355F18002AD31D /* headers */,
+				FBBF669717355F15002AD31D /* main.cpp */,
+				FBBF66A817355F8B002AD31D /* faux.cpp */,
 				FBBF669017355D0E002AD31D /* Practica3_EDA.1 */,
 			);
 			path = "Practica3-EDA";
+			sourceTree = "<group>";
+		};
+		FBBF669917355F18002AD31D /* headers */ = {
+			isa = PBXGroup;
+			children = (
+				FBBF66A517355F7E002AD31D /* faux.h */,
+				FBBF66A617355F7E002AD31D /* mezcla.h */,
+				FBBF66A717355F7E002AD31D /* pareja.h */,
+				FBBF669A17355F70002AD31D /* Arbin.h */,
+				FBBF669B17355F70002AD31D /* ArbinConCopias.h */,
+				FBBF669C17355F70002AD31D /* Arbus.h */,
+				FBBF669D17355F70002AD31D /* Cola.h */,
+				FBBF669E17355F70002AD31D /* DCola.h */,
+				FBBF669F17355F70002AD31D /* Excepciones.h */,
+				FBBF66A017355F70002AD31D /* Hash.h */,
+				FBBF66A117355F70002AD31D /* Lista.h */,
+				FBBF66A217355F70002AD31D /* Pila.h */,
+				FBBF66A317355F70002AD31D /* PilaLE.h */,
+				FBBF66A417355F70002AD31D /* Tabla.h */,
+			);
+			name = headers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,7 +156,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBBF668F17355D0E002AD31D /* main.cpp in Sources */,
+				FBBF669817355F15002AD31D /* main.cpp in Sources */,
+				FBBF66A917355F8B002AD31D /* faux.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
