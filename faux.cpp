@@ -1,8 +1,15 @@
 
+#include <string>
+#include "pareja.h"
 #include "faux.h"
 #include "TADs/lista.h"
 #include<stdlib.h>
 #include<time.h>
+#include <iostream>
+#include <cfloat>
+#include <math.h>
+
+using namespace std;
 
 Solucion solucionDirecta(Lista<Punto> &puntos, int n);
 
@@ -29,3 +36,47 @@ void generarListaDePuntos(Lista<Punto> &l,int n)
         l.ponDr(p1);
     }
 }
+void imprimeListadePuntos(Lista<Punto> &l)
+{
+    Lista<Punto>::Iterador it = l.principio();
+    Punto p1;
+    while (it  != l.final())
+    {
+        p1= it.elem();
+        imprimeUnicoPunto(p1);
+        it.avanza();
+    }
+}
+
+void imprimeUnicoPunto(const Punto &p1)
+{
+      cout << "(" << p1.x << "," << p1.y << ")"<< endl;
+}
+
+Solucion parMasCercanoFuerzaBruta(Lista<Punto> &l)
+{
+    double distancia_minima= DBL_MAX;
+    double p1aux, p2aux,aux;
+    Punto p1,p2;
+    Solucion s1;
+    for(int i=0; i < l.numElems(); i++)
+    {
+        p1=l.elem(i);
+        for(int j=i+1; j < l.numElems() ; j++)
+        {
+            p2=l.elem(j);
+            p1aux= pow(p1.x-p2.x,2);
+            p2aux= pow(p1.y-p2.y,2);
+            aux= sqrt(p1aux+p2aux);
+            if(aux!=distancia_minima )
+            {
+                distancia_minima=aux;
+                s1.p1=p1;
+                s1.p2=p2;
+                s1.delta=aux;
+            }
+        }
+    }
+    return s1;
+}
+

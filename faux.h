@@ -27,3 +27,15 @@ Solucion eligeMinimo(const Solucion &s1, const Solucion &s2,const Punto &p1, con
 
 //Rellena una lista con N puntos aleatorios
 void generarListaDePuntos(Lista<Punto> &l,int n);
+
+//Imprime una lista de puntos de forma adecuada
+
+void imprimeListadePuntos(Lista<Punto> &l);
+
+//Solucion 'fuerzabruta' del algoritmo de la nube de puntos
+
+Solucion parMasCercanoFuerzaBruta(Lista<Punto> &l);
+
+//Funcion que muestra un punto de forma adecuada  -- Auxiliar
+void imprimeUnicoPunto(const Punto &p1);
+
