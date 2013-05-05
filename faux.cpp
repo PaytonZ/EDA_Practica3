@@ -12,8 +12,6 @@
 
 using namespace std;
 
-Solucion solucionDirecta(Lista<Punto> &puntos, int n);
-
 
 Lista<Punto> merge(Lista<Punto> &l1, Lista<Punto> &l2);
 
@@ -26,11 +24,11 @@ Lista<Punto> filtraBanda(Lista<Punto> &l, double d, double x)
     while (it  != l.final())
     {
         // Valor absoluto de (punto.x - valor_de_x) al cuadrado tiene que ser menor que la distancia d
-       if (abs(pow(it.elem().x-x,2)) <= d)
-       {
-           resultado.ponDr(it.elem());
-       }
-       it.avanza();
+        if (abs(pow(it.elem().x-x,2)) <= d)
+        {
+            resultado.ponDr(it.elem());
+        }
+        it.avanza();
     }
     return resultado;
 
@@ -41,7 +39,7 @@ Lista<Punto> filtraBanda(Lista<Punto> &l, double d, double x)
 // devuelve una distancia +infinito.
 void recorreBanda(Lista<Punto> &l, Punto &p1, Punto &p2, double &d)
 {
-   double distancia_minima= DBL_MAX;
+    double distancia_minima= DBL_MAX;
     double p1aux, p2aux,aux;
     Punto punto1,punto2;
     Solucion s1;
@@ -165,33 +163,33 @@ Solucion parMasCercano(Lista<Punto> puntos, int n)
     }
     else /// n >= 4    // Dividimos la nube en dos
 
-       {
-            int m1 = n / 2;
-            int m2 = n - m1;
+    {
+        int m1 = n / 2;
+        int m2 = n - m1;
 
-            Lista<Punto> I = partirLista(puntos,0,m1);
-            Lista<Punto> D = partirLista(puntos,m1+1,n-1);
-            // Resolvemos recursivamente las dos nubes
+        Lista<Punto> I = partirLista(puntos,0,m1);
+        Lista<Punto> D = partirLista(puntos,m1+1,n-1);
+        // Resolvemos recursivamente las dos nubes
+        imprimeListadePuntos(D);
+
+        Solucion sol1 = parMasCercano(I,m1);
+        Solucion sol2 = parMasCercano(D,m2);
+
+        // Calculamos la coordenada x de la linea divisoria
+        double xl = (I.primero().x + D.primero().x) / 2;
+        // Ordenamos por la coordenada y la nube de puntos
+        Lista<Punto> lista = mezcla(sol1.lista,sol2.lista,menorX);
+        double delta = min(sol1.delta,sol2.delta);
+        // Filtramos los puntos de la banda y la recorremos
+        Lista<Punto> B = filtraBanda(lista,delta,xl);
+        recorreBanda(B,p1,p2,dist);
+        // Elegimos la mejor solucion de las tres
+        sol = eligeMinimo(sol1,sol2,p1,p2,dist);
+        sol.lista = lista;
+    }
 
 
-
-            Solucion sol1 = parMasCercano(I,m1);
-            Solucion sol2 = parMasCercano(D,m2);
-                // Calculamos la coordenada x de la linea divisoria
-            double xl = (I.primero().x + D.primero().x) / 2;
-            // Ordenamos por la coordenada y la nube de puntos
-            Lista<Punto> lista = mezcla(sol1.lista,sol2.lista,menorX);
-            double delta = min(sol1.delta,sol2.delta);
-            // Filtramos los puntos de la banda y la recorremos
-            Lista<Punto> B = filtraBanda(lista,delta,xl);
-            recorreBanda(B,p1,p2,dist);
-            // Elegimos la mejor solucion de las tres
-            sol = eligeMinimo(sol1,sol2,p1,p2,dist);
-            sol.lista = lista;
-        }
-
-
-        return sol;
+    return sol;
 
 }
 
