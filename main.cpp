@@ -9,7 +9,7 @@
 #include "mezcla.h"
 
 
-#define MAX_PUNTOS 5
+#define MAX_PUNTOS 200
 using namespace std;
 
 int main()
@@ -18,7 +18,7 @@ int main()
     srand(time(NULL));
     Lista<Punto> lista_de_puntos =  generarListaDePuntos(MAX_PUNTOS);
     Solucion s1;
-    imprimeListadePuntos(lista_de_puntos);
+    //imprimeListadePuntos(lista_de_puntos);
     s1 = solucionDirecta(lista_de_puntos,MAX_PUNTOS);
 
     cout << "-----" << endl;
@@ -27,7 +27,7 @@ int main()
     cout << s1.delta << endl;
 
 
-//    ordenacionMergeSort(lista_de_puntos);
+    OrdenacionMergeSort(lista_de_puntos);
     Solucion s2 = parMasCercano(lista_de_puntos,MAX_PUNTOS);
     cout << "-----" << endl;
     imprimeUnicoPunto(s2.p1);

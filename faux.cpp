@@ -13,7 +13,7 @@
 using namespace std;
 
 
-Lista<Punto> merge(Lista<Punto> &l1, Lista<Punto> &l2);
+
 
 
 Lista<Punto> filtraBanda(Lista<Punto> &l, double d, double x)
@@ -42,22 +42,23 @@ void recorreBanda(Lista<Punto> &l, Punto &p1, Punto &p2, double &d)
     double distancia_minima= DBL_MAX;
     double p1aux, p2aux,aux;
     Punto punto1,punto2;
-    Solucion s1;
+
     int max_iterable;
 
     if (l.numElems()<=1)
     {
-
+        d=DBL_MAX;
     }
     else
     {
 
 
-        for(int i=0; i < 7; i++)
+        for(int i=0; i < 7 && i< l.numElems(); i++)
         {
             punto1=l.elem(i);
-            for(int j=i+1; j < i+7; j++)
+            for(int j=i+1; j < i+7 && j < l.numElems(); j++)
             {
+                assert(j<l.numElems());
                 punto2=l.elem(j);
                 p1aux= pow(punto1.x-punto2.x,2);
                 p2aux= pow(punto1.y-punto2.y,2);
@@ -65,15 +66,14 @@ void recorreBanda(Lista<Punto> &l, Punto &p1, Punto &p2, double &d)
                 if(aux<distancia_minima )
                 {
                     distancia_minima=aux;
-                    s1.p1=punto1;
-                    s1.p2=punto2;
-                    s1.delta=aux;
+                    p1=punto1;
+                    p2=punto2;
+                    d=aux;
+
                 }
             }
         }
-        p1=s1.p1;
-        p2=s1.p2;
-        d=s1.delta;
+   ;
     }
 }
 // Dadas tres soluciones , cada una consistente en un par de puntos y su
@@ -142,7 +142,6 @@ Solucion solucionDirecta(Lista<Punto> &l, int n)
     Punto p1,p2;
     Solucion s1;
 
-
     for(int i=0; i < n; i++)
     {
         p1=l.elem(i);
@@ -163,7 +162,8 @@ Solucion solucionDirecta(Lista<Punto> &l, int n)
             }
         }
     }
-
+    s1.lista.ponDr(s1.p1);
+    s1.lista.ponDr(s1.p2);
     return s1;
 }
 
@@ -175,9 +175,6 @@ Solucion parMasCercano(Lista<Punto> puntos, int n)
     double dist;
     if (n <= 3)   // Casos base
     {
-        // cout << "n:---------" << n <<endl;
-        imprimeListadePuntos(puntos);
-        //cout << "--------------" << endl;
         sol = solucionDirecta(puntos,n);
     }
     else /// n >= 4    // Dividimos la nube en dos
@@ -190,13 +187,14 @@ Solucion parMasCercano(Lista<Punto> puntos, int n)
         Lista<Punto> D = partirLista(puntos,m1,n-1);
         // Resolvemos recursivamente las dos nubes
 
-
         Solucion sol1 = parMasCercano(I,m1);
         Solucion sol2 = parMasCercano(D,m2);
 
-
         // Calculamos la coordenada x de la linea divisoria
         double xl = (I.primero().x + D.primero().x) / 2;
+
+
+
 
         // Ordenamos por la coordenada y la nube de puntos
         Lista<Punto> lista = mezcla(sol1.lista,sol2.lista,menorX);

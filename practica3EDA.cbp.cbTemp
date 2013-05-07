@@ -36,7 +36,6 @@
 		<Unit filename="faux.cpp" />
 		<Unit filename="faux.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="mezcla.cpp" />
 		<Unit filename="mezcla.h" />
 		<Unit filename="pareja.h" />
 		<Extensions>
