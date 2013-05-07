@@ -108,12 +108,13 @@ void deListaAarray(Lista<Punto> &l, Punto array_puntos[])
 {
 
     Lista<Punto>::Iterador it = l.principio();
-    Punto p1;
-    int i;
+
+    int i=0;
     while (it  != l.final())
     {
         array_puntos[i]=it.elem();
         it.avanza();
+        i++;
 
     }
 

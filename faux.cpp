@@ -3,8 +3,8 @@
 #include "pareja.h"
 #include "faux.h"
 #include "TADs/lista.h"
-#include<stdlib.h>
-#include<time.h>
+#include <stdlib.h>
+#include <time.h>
 #include <iostream>
 #include <cfloat>
 #include <math.h>
