@@ -1,12 +1,14 @@
 #include <string>
+#include "mezcla.h"
 #include "pareja.h"
 #include "faux.h"
 #include "TADs/lista.h"
-#include<stdlib.h>
-#include<time.h>
+#include <stdlib.h>
+#include <time.h>
 #include <iostream>
 
-#define MAX_PUNTOS 10
+
+#define MAX_PUNTOS 5
 using namespace std;
 
 int main()
@@ -23,7 +25,13 @@ int main()
     imprimeUnicoPunto(s1.p2);
     cout << s1.delta << endl;
 
-    parMasCercano(lista_de_puntos,MAX_PUNTOS);
+
+    OrdenacionMergeSort(lista_de_puntos);
+    Solucion s2 = parMasCercano(lista_de_puntos,MAX_PUNTOS);
+    cout << "-----" << endl;
+    imprimeUnicoPunto(s2.p1);
+    imprimeUnicoPunto(s2.p2);
+    cout << s2.delta << endl;
 
     return 0;
 }

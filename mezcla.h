@@ -1,17 +1,14 @@
 #ifndef MEZCLA_H
 #define MEZCLA_H
 
+
 #include <string>
-#include "pareja.h"
-#include "faux.h"
-#include "TADs/lista.h"
 #include<stdlib.h>
 #include<time.h>
 #include <iostream>
 #include <cfloat>
 #include <math.h>
-
-
+#include "faux.h"
 
 
 using namespace std;
@@ -19,13 +16,17 @@ using namespace std;
 // que recibe dos puntos por referencia constante y devuelve
 // un booleano
 typedef bool (*Comparador) (const Punto &, const Punto &);
-
+void mezclam(Punto array_puntos[], int a, int m, int b,Comparador menor);
 
 // Función que compara dos puntos por su abscisa. Su definición
 // es compatible con el tipo Comparador
 bool menorX(const Punto &p1, const Punto &p2)
 {
     return p1.x < p2.x;
+}
+bool menorigualX(const Punto &p1, const Punto &p2)
+{
+    return p1.x <= p2.x;
 }
 
 bool menorY(const Punto &p1, const Punto &p2)
@@ -78,10 +79,87 @@ Lista<Punto> mezcla(Lista<Punto> &l1, Lista<Punto> &l2, Comparador menor)
 }
 
 
+
+void mergeSort(Punto array_puntos[], int a, int b)
+{
+    int m;
+    if (a < b)
+    {
+        m = (a + b) / 2;
+        mergeSort(array_puntos, a, m);
+        mergeSort(array_puntos, m + 1, b);
+        mezclam(array_puntos, a, m, b,menorigualX);
+    }
+}
+
+
+void OrdenacionMergeSort(Lista<Punto> &l)
+{
+
+    Punto array_puntos[l.numElems()];
+
+
+    mergeSort(array_puntos, 0, l.numElems());
+}
+
+
+
+void deListaAarray(Lista<Punto> &l, Punto array_puntos[])
+{
+
+    Lista<Punto>::Iterador it = l.principio();
+    Punto p1;
+    int i;
+    while (it  != l.final())
+    {
+        array_puntos[i]=it.elem();
+        it.avanza();
+
+    }
+
+}
+
+void mezclam(Punto array_puntos[], int a, int m, int b,Comparador menor)
+{
+    Punto *u = new Punto[b - a + 1];
+    int i, j, k;
+    for (k = a; k <= b; k++) u[k - a] = array_puntos[k];
+    i = 0;
+    j = m - a + 1;
+    k = a;
+    while ((i <= m - a) && (j <= b - a))
+    {
+        if (menor(u[i],u[j]))
+        {
+            array_puntos[k] = u[i];
+            i = i + 1;
+        }
+        else
+        {
+            array_puntos[k] = u[j];
+            j = j + 1;
+        }
+        k = k + 1;
+    }
+    while (i <= m - a)
+    {
+        array_puntos[k] = u[i];
+        i = i + 1;
+        k = k + 1;
+    }
+    while (j <= b - a)
+    {
+        array_puntos[k] = u[j];
+        j = j + 1;
+        k = k + 1;
+    }
+    delete[] u;
+}
+
+
 // Esta funcion devuelve la lista entre los parametros a y b
 Lista<Punto> partirLista(Lista<Punto> &original, int a , int b)
 {
-    cout << "Estoy creando una lista desde " << a << "hasta " << b << endl;
     Lista<Punto> lista_nueva;
     for(int i=a; i <=b; i ++)
     {
@@ -90,7 +168,4 @@ Lista<Punto> partirLista(Lista<Punto> &original, int a , int b)
     assert(lista_nueva.numElems()>0);
     return lista_nueva;
 }
-
-
-
 #endif
