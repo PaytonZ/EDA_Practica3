@@ -53,6 +53,7 @@ void mezclam(Punto array_puntos[], int a, int m, int b,Comparador menor);
 // Esta funcion devuelve la lista entre los parametros a y b
 Lista<Punto> partirLista(Lista<Punto> &original, int a , int b);
 
-bool comprobarListaOrdenada(Lista<Punto> &lista);
+Lista<Punto> partirListam(Lista<Punto> &original);
+
 
 #endif

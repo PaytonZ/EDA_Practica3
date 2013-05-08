@@ -52,7 +52,6 @@ void recorreBanda(Lista<Punto> &l, Punto &p1, Punto &p2, double &d)
     else
     {
 
-
         for(int i=0; i < 7 && i< l.numElems(); i++)
         {
             punto1=l.elem(i);
@@ -73,7 +72,7 @@ void recorreBanda(Lista<Punto> &l, Punto &p1, Punto &p2, double &d)
                 }
             }
         }
-   ;
+
     }
 }
 // Dadas tres soluciones , cada una consistente en un par de puntos y su
@@ -163,7 +162,7 @@ Solucion solucionDirecta(Lista<Punto> &l, int n)
         }
     }
     s1.lista.ponDr(s1.p1);
-    s1.lista.ponDr(s1.p2);
+   s1.lista.ponDr(s1.p2);
     return s1;
 }
 
@@ -197,7 +196,7 @@ Solucion parMasCercano(Lista<Punto> puntos, int n)
 
 
         // Ordenamos por la coordenada y la nube de puntos
-        Lista<Punto> lista = mezcla(sol1.lista,sol2.lista,menorX);
+        Lista<Punto> lista = mezcla(sol1.lista,sol2.lista,menorY);
 
         double delta = min(sol1.delta,sol2.delta);
         // Filtramos los puntos de la banda y la recorremos
