@@ -1,6 +1,7 @@
-#include "pareja.h"
 #ifndef FAUX_H
 #define FAUX_H
+
+#include "pareja.h"
 
 // Dada una lista con dos o tres puntos , devuelve los dos puntos mas
 // cercanos , su distancia y una lista con los puntos ordenados
@@ -25,7 +26,6 @@ void recorreBanda(Lista<Punto> &l, Punto &p1, Punto &p2, double &d);
 // Dadas tres soluciones , cada una consistente en un par de puntos y su
 // distancia , devuelve el par mas cercano de los tres y su distancia .
 Solucion eligeMinimo(const Solucion &s1, const Solucion &s2,const Punto &p1, const Punto &p2, double d);
-
 
 //Rellena una lista con N puntos aleatorios
 Lista<Punto> generarListaDePuntos(int n);

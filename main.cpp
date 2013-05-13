@@ -2,7 +2,7 @@
 
 #include "pareja.h"
 #include "faux.h"
-#include "TADs/lista.h"
+#include "TADs/Lista.h"
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>

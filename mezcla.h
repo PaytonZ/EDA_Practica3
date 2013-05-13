@@ -3,8 +3,8 @@
 
 
 #include <string>
-#include<stdlib.h>
-#include<time.h>
+#include <stdlib.h>
+#include <time.h>
 #include <iostream>
 #include <cfloat>
 #include <cmath>
