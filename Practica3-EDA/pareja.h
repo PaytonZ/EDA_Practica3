@@ -2,8 +2,7 @@
 #ifndef PAREJA_H
 #define PAREJA_H
 
-//#include "TADs/lista.h"
-#include "Lista.h"
+#include "lista.h"
 
 typedef struct
 {

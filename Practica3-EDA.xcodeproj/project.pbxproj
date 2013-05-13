@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E1A0A5F17415C160087C57E /* mezcla.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A0A5E17415C160087C57E /* mezcla.cpp */; };
 		FBBF669117355D0E002AD31D /* Practica3_EDA.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = FBBF669017355D0E002AD31D /* Practica3_EDA.1 */; };
 		FBBF669817355F15002AD31D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FBBF669717355F15002AD31D /* main.cpp */; };
 		FBBF66A917355F8B002AD31D /* faux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FBBF66A817355F8B002AD31D /* faux.cpp */; };
@@ -26,6 +27,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3E1A0A5E17415C160087C57E /* mezcla.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mezcla.cpp; sourceTree = "<group>"; };
 		FBBF668B17355D0E002AD31D /* Practica3-EDA */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Practica3-EDA"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBBF669017355D0E002AD31D /* Practica3_EDA.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Practica3_EDA.1; sourceTree = "<group>"; };
 		FBBF669717355F15002AD31D /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			children = (
 				FBBF669917355F18002AD31D /* headers */,
 				FBBF669717355F15002AD31D /* main.cpp */,
+				3E1A0A5E17415C160087C57E /* mezcla.cpp */,
 				FBBF66A817355F8B002AD31D /* faux.cpp */,
 				FBBF669017355D0E002AD31D /* Practica3_EDA.1 */,
 			);
@@ -158,6 +161,7 @@
 			files = (
 				FBBF669817355F15002AD31D /* main.cpp in Sources */,
 				FBBF66A917355F8B002AD31D /* faux.cpp in Sources */,
+				3E1A0A5F17415C160087C57E /* mezcla.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +260,7 @@
 				FBBF669617355D0E002AD31D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -119,8 +119,10 @@ void deListaAarray(Lista<Punto> &l, Punto array_puntos[])
 void deArrayALista(Lista<Punto> &l, Punto array_puntos[])
 {
     int n= l.numElems();
+    
     Lista<Punto> lista_de_puntos;
-    for(int i=0; i<n; i++)
+    
+    for(int i=0; i < n; i++)
     {
         lista_de_puntos.ponDr(array_puntos[i]);
     }

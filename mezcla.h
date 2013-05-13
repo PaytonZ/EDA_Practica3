@@ -7,7 +7,7 @@
 #include<time.h>
 #include <iostream>
 #include <cfloat>
-#include <math.h>
+#include <cmath>
 #include "faux.h"
 
 

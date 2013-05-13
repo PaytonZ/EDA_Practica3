@@ -1,6 +1,7 @@
-#include "pareja.h"
 #ifndef FAUX_H
 #define FAUX_H
+
+#include "pareja.h"
 
 // Dada una lista con dos o tres puntos , devuelve los dos puntos mas
 // cercanos , su distancia y una lista con los puntos ordenados
@@ -41,4 +42,5 @@ Solucion parMasCercanoFuerzaBruta(Lista<Punto> &l);
 //Funcion que muestra un punto de forma adecuada  -- Auxiliar
 void imprimeUnicoPunto(const Punto &p1);
 
+Solucion parMasCercano(Lista<Punto> puntos, int n);
 #endif
