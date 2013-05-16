@@ -1,4 +1,3 @@
-
 #include <string>
 #include "pareja.h"
 #include "faux.h"
@@ -24,6 +23,7 @@ Lista<Punto> filtraBanda(Lista<Punto> &l, double d, double x)
     while (it  != l.final())
     {
         // Valor absoluto de (punto.x - valor_de_x) al cuadrado tiene que ser menor que la distancia d
+        // Antonio: la distancia no se calcula asÃ­
         if (abs(pow(it.elem().x-x,2)) <= d)
         {
             resultado.ponDr(it.elem());
@@ -52,6 +52,8 @@ void recorreBanda(Lista<Punto> &l, Punto &p1, Punto &p2, double &d)
     else
     {
 
+        // Antonio: tienes que comparar cada punto con los 7 siguientes
+        // Antonio: mejor con iteradores
         for(int i=0; i < 7 && i< l.numElems(); i++)
         {
             punto1=l.elem(i);
@@ -80,21 +82,21 @@ void recorreBanda(Lista<Punto> &l, Punto &p1, Punto &p2, double &d)
 Solucion eligeMinimo(const Solucion &s1, const Solucion &s2,const Punto &p1, const Punto &p2, double d)
 {
     Solucion resultado;
-    //s1 es el mas pequeño
+    //s1 es el mas pequeï¿½o
     if (s1.delta < s2.delta && s1.delta < d)
     {
         resultado.p1=s1.p1;
         resultado.p2=s1.p2;
         resultado.delta=s1.delta;
     }
-    //s2 es el mas pequeño
+    //s2 es el mas pequeï¿½o
     else if( s2.delta < s1.delta && s2.delta < d)
     {
         resultado.p1=s2.p1;
         resultado.p2=s2.p2;
         resultado.delta=s2.delta;
     }
-    else // La solucion por parametros es la mas pequeña
+    else // La solucion por parametros es la mas pequeï¿½a
     {
         resultado.p1=p1;
         resultado.p2=p2;
@@ -134,6 +136,8 @@ void imprimeUnicoPunto(const Punto &p1)
     cout << "(" << p1.x << "," << p1.y << ")"<< endl;
 }
 
+// Antonio : la soluciÃ³n directa O(n^2) no tiene que devolver una lista de puntos
+// ordenados por la y (no es necesario)
 Solucion solucionDirecta(Lista<Punto> &l, int n)
 {
     double distancia_minima= DBL_MAX;
@@ -141,6 +145,7 @@ Solucion solucionDirecta(Lista<Punto> &l, int n)
     Punto p1,p2;
     Solucion s1;
 
+    // Antonio: cambiarlo a iteradores
     for(int i=0; i < n; i++)
     {
         p1=l.elem(i);
@@ -166,6 +171,8 @@ Solucion solucionDirecta(Lista<Punto> &l, int n)
     return s1;
 }
 
+
+// Antonio: pasar puntos por referencia
 Solucion parMasCercano(Lista<Punto> puntos, int n)
 {
     Solucion sol;
@@ -175,6 +182,7 @@ Solucion parMasCercano(Lista<Punto> puntos, int n)
     if (n <= 3)   // Casos base
     {
         sol = solucionDirecta(puntos,n);
+        // Antonio: ordenar los n puntos por la y y devolverlo como parte de la soluciÃ³n
     }
     else /// n >= 4    // Dividimos la nube en dos
 
@@ -182,6 +190,7 @@ Solucion parMasCercano(Lista<Punto> puntos, int n)
         int m1 = n / 2;
         int m2 = n - m1;
 
+        // Antonio: devolver las dos listas con una Ãºnica llamada 
         Lista<Punto> I = partirLista(puntos,0,m1-1);
         Lista<Punto> D = partirLista(puntos,m1,n-1);
         // Resolvemos recursivamente las dos nubes
