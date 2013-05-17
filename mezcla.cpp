@@ -72,27 +72,27 @@ Lista<Punto> mezcla(Lista<Punto> &l1, Lista<Punto> &l2, Comparador menor)
 
 
 
-void mergeSort(Punto array_puntos[], int a, int b)
+void mergeSort(Punto array_puntos[], int a, int b,Comparador menor)
 {
     int m;
     if (a < b)
     {
         m = (a + b) / 2;
-        mergeSort(array_puntos, a, m);
-        mergeSort(array_puntos, m + 1, b);
-        mezclam(array_puntos, a, m, b,menorigualX);
+        mergeSort(array_puntos, a, m,menor);
+        mergeSort(array_puntos, m + 1, b,menor);
+        mezclam(array_puntos, a, m, b,menor);
     }
 }
 
 
-void OrdenacionMergeSort(Lista<Punto> &l)
+void OrdenacionMergeSort(Lista<Punto> &l,Comparador menor)
 {
 
     Punto array_puntos[l.numElems()];
     deListaAarray(l,array_puntos);
 
 
-    mergeSort(array_puntos, 0, l.numElems());
+    mergeSort(array_puntos, 0, l.numElems(),menor);
 
     deArrayALista(l,array_puntos);
 }

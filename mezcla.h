@@ -38,7 +38,7 @@ void mergeSort(Punto array_puntos[], int a, int b);
 
 
 
-void OrdenacionMergeSort(Lista<Punto> &l);
+void OrdenacionMergeSort(Lista<Punto> &l,Comparador menor);
 
 
 

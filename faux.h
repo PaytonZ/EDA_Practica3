@@ -41,5 +41,5 @@ Solucion parMasCercanoFuerzaBruta(Lista<Punto> &l);
 //Funcion que muestra un punto de forma adecuada  -- Auxiliar
 void imprimeUnicoPunto(const Punto &p1);
 
-Solucion parMasCercano(Lista<Punto> puntos, int n);
+Solucion parMasCercano(Lista<Punto> &puntos, int n);
 #endif

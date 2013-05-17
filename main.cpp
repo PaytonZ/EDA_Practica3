@@ -29,22 +29,22 @@ int main()
     for(int i=0; i < casos_totales ; i++)
     {
 
-    cout << "PRUEBA NUM " << i << endl;
+        cout << "PRUEBA NUM " << i << endl;
 
-    Lista<Punto> lista_de_puntos =  generarListaDePuntos(MAX_PUNTOS);
+        Lista<Punto> lista_de_puntos =  generarListaDePuntos(MAX_PUNTOS);
 
-    Solucion s1,s2;
+        Solucion s1,s2;
 
-    s1=inicioAlgoritmoDirecto(lista_de_puntos);
+        s1=inicioAlgoritmoDirecto(lista_de_puntos);
 
 
-    OrdenacionMergeSort(lista_de_puntos);
+        OrdenacionMergeSort(lista_de_puntos,menorigualX);
 
-    s2=inicioAlgoritmoDYV(lista_de_puntos);
+        s2=inicioAlgoritmoDYV(lista_de_puntos);
 
-    cout << "CORRECTO.... " << iguales(s1,s2) << endl;
+        cout << "CORRECTO.... " << iguales(s1,s2) << endl;
 
-    if(iguales(s1,s2)) casos_correctos++;
+        if(iguales(s1,s2)) casos_correctos++;
 
     }
 
@@ -66,14 +66,14 @@ Solucion inicioAlgoritmoDirecto(Lista<Punto> &lista_de_puntos)
 
     tiempoFinal1=clock();
 
-   /* cout << "-----DIRECTA" << endl;
-    imprimeUnicoPunto(s1.p1);
-    imprimeUnicoPunto(s1.p2);
-    cout << s1.delta << endl;
+    /* cout << "-----DIRECTA" << endl;
+     imprimeUnicoPunto(s1.p1);
+     imprimeUnicoPunto(s1.p2);
+     cout << s1.delta << endl;
 
-    tiempo = ((float) (tiempoFinal1 - tiempoInicio1)) / CLOCKS_PER_SEC;
-    cout << "El algoritmo Directo con " << MAX_PUNTOS << " puntos tardo " <<  tiempo << " segundos" << endl;
-    */
+     tiempo = ((float) (tiempoFinal1 - tiempoInicio1)) / CLOCKS_PER_SEC;
+     cout << "El algoritmo Directo con " << MAX_PUNTOS << " puntos tardo " <<  tiempo << " segundos" << endl;
+     */
     return s1;
 }
 
