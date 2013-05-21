@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1368921984 source:d:\mis documentos\github\practica3eda\main.cpp
+1369175982 source:d:\mis documentos\github\practica3eda\main.cpp
 	<string>
 	"pareja.h"
 	"faux.h"
@@ -8,6 +8,7 @@
 	<time.h>
 	<iostream>
 	"mezcla.h"
+	"dyv.h"
 
 1368799499 d:\mis documentos\github\practica3eda\pareja.h
 	"TADs/Lista.h"
@@ -20,10 +21,10 @@
 	<string>
 	<iosfwd>
 
-1368921942 d:\mis documentos\github\practica3eda\faux.h
+1369176142 d:\mis documentos\github\practica3eda\faux.h
 	"pareja.h"
 
-1368921922 source:d:\mis documentos\github\practica3eda\faux.cpp
+1369176100 source:d:\mis documentos\github\practica3eda\faux.cpp
 	<string>
 	"pareja.h"
 	"faux.h"
@@ -35,7 +36,7 @@
 	<math.h>
 	"mezcla.h"
 
-1368921140 d:\mis documentos\github\practica3eda\mezcla.h
+1369176097 d:\mis documentos\github\practica3eda\mezcla.h
 	<string>
 	<stdlib.h>
 	<time.h>
@@ -44,7 +45,7 @@
 	<cmath>
 	"faux.h"
 
-1368921346 source:d:\mis documentos\github\practica3eda\mezcla.cpp
+1369175793 source:d:\mis documentos\github\practica3eda\mezcla.cpp
 	<string>
 	<stdlib.h>
 	<time.h>
@@ -52,5 +53,19 @@
 	<cfloat>
 	<cmath>
 	"faux.h"
+	"mezcla.h"
+
+1369175903 d:\mis documentos\github\practica3eda\dyv.h
+
+1369176053 source:d:\mis documentos\github\practica3eda\dyv.cpp
+	<string>
+	"pareja.h"
+	"faux.h"
+	"TADs/Lista.h"
+	<stdlib.h>
+	<time.h>
+	<iostream>
+	<cfloat>
+	<math.h>
 	"mezcla.h"
 

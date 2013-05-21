@@ -92,7 +92,7 @@ void OrdenacionMergeSort(Lista<Punto> &l,Comparador menor)
     deListaAarray(l,array_puntos);
 
 
-    mergeSort(array_puntos, 0, l.numElems(),menor);
+    mergeSort(array_puntos, 0, l.numElems()-1,menor);
 
     deArrayALista(l,array_puntos);
 }
@@ -195,7 +195,7 @@ void partirListam(Lista<Punto> &original, int medio , Lista<Punto> &izquierda , 
         derecha.ponDr(it.elem());
         it.avanza();
     }
-        assert(izquierda.numElems()>0);
+    assert(izquierda.numElems()>0);
 
 
 }

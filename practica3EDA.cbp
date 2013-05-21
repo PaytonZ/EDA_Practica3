@@ -33,6 +33,8 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="TADs\Lista.h" />
+		<Unit filename="dyv.cpp" />
+		<Unit filename="dyv.h" />
 		<Unit filename="faux.cpp" />
 		<Unit filename="faux.h" />
 		<Unit filename="main.cpp" />
