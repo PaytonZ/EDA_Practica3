@@ -177,6 +177,29 @@ Lista<Punto> partirLista(Lista<Punto> &original, int a , int b)
     assert(lista_nueva.numElems()>0);
     return lista_nueva;
 }
+
+void partirListam(Lista<Punto> &original, int medio , Lista<Punto> &izquierda , Lista<Punto> &derecha)
+{
+
+    Lista<Punto>::Iterador it = original.principio();
+    int i=0;
+
+    while (it != original.final() && i < medio)
+    {
+        i++;
+        izquierda.ponDr(it.elem());
+        it.avanza();
+    }
+    while (it!= original.final())
+    {
+        derecha.ponDr(it.elem());
+        it.avanza();
+    }
+        assert(izquierda.numElems()>0);
+
+
+}
+
 /*
 Lista<Punto> partirListam(Lista<Punto> &original,int medio)
 {

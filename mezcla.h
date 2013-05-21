@@ -49,6 +49,8 @@ void deArrayALista(Lista<Punto> &l, Punto array_puntos[]);
 
 void mezclam(Punto array_puntos[], int a, int m, int b,Comparador menor);
 
+void partirListam(Lista<Punto> &original, int medio , Lista<Punto> &izquierda , Lista<Punto> &derecha);
+
 
 // Esta funcion devuelve la lista entre los parametros a y b
 Lista<Punto> partirLista(Lista<Punto> &original, int a , int b);

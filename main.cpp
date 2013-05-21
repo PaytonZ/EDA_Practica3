@@ -9,7 +9,7 @@
 #include "mezcla.h"
 
 
-#define MAX_PUNTOS 100
+#define MAX_PUNTOS 1000
 using namespace std;
 
 Solucion inicioAlgoritmoDirecto(Lista<Punto> &lista_de_puntos);
@@ -24,7 +24,7 @@ int main()
     //Inicialiacion de una semilla para generar numeros aleatorios
     srand(time(NULL));
     int casos_correctos=0;
-    int casos_totales=10;
+    int casos_totales=100;
 
     for(int i=0; i < casos_totales ; i++)
     {
@@ -85,7 +85,7 @@ Solucion inicioAlgoritmoDYV(Lista<Punto> &lista_de_puntos)
     float tiempo;
 
     tiempoInicio1=clock();
-    Solucion s2 = parMasCercano(lista_de_puntos,MAX_PUNTOS);
+    Solucion s2 = parMasCercano(lista_de_puntos,MAX_PUNTOS,5);
     tiempoFinal1=clock();
 
     /*cout << "-----DYV" << endl;

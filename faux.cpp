@@ -37,55 +37,51 @@ Lista<Punto> filtraBanda(Lista<Punto> &l, double d, double x)
 // siguientes si los hubiera . Devuelve el par de puntos con menor
 // distancia , y dicha distancia.Si l tiene un punto o ninguno ,
 // devuelve una distancia +infinito.
-/*void recorreBanda(Lista<Punto> &l, Punto &p1, Punto &p2, double &d)
+void recorreBanda(Lista<Punto> &l, Punto &p1, Punto &p2, double &d)
 {
     double distancia_minima= DBL_MAX;
     double p1aux, p2aux,aux;
     Punto punto1,punto2;
 
-    int max_iterable;
+    d=distancia_minima;
 
-    if (l.numElems()<=1)
+
+    int i=0;
+    Lista<Punto>::Iterador it = l.principio();
+
+    // Antonio: tienes que comparar cada punto con los 7 siguientes
+    // Antonio: mejor con iteradores
+
+    while(it != l.final())
     {
-        d=DBL_MAX;
-    }
-    else
-    {
-        int i=0;
-        Lista<Punto>::Iterador it = l.principio();
-
-        // Antonio: tienes que comparar cada punto con los 7 siguientes
-        // Antonio: mejor con iteradores
-
-        while(it != l.final())
+        punto1=it.elem();
+        it.avanza();
+        Lista<Punto>::Iterador it2 = it;
+        i=0;
+        while(it2 != l.final() && i < 7)
         {
-            punto1=it.elem();
-            Lista<Punto>::Iterador it2 = it;
-            i=0;
-            while(it2 != l.final() && i < 7)
+
+            punto2=it2.elem();
+            p1aux= pow(punto1.x-punto2.x,2);
+            p2aux= pow(punto1.y-punto2.y,2);
+            aux= sqrt(p1aux+p2aux);
+            if(aux<distancia_minima )
             {
+                distancia_minima=aux;
+                p1=punto1;
+                p2=punto2;
+                d=aux;
 
-                punto2=it2.elem();
-                p1aux= pow(punto1.x-punto2.x,2);
-                p2aux= pow(punto1.y-punto2.y,2);
-                aux= sqrt(p1aux+p2aux);
-                if(aux<distancia_minima )
-                {
-                    distancia_minima=aux;
-                    p1=punto1;
-                    p2=punto2;
-                    d=aux;
-
-                }
-                i++;
-                it2.avanza();
             }
-            it.avanza();
+            i++;
+            it2.avanza();
         }
+
     }
+}
 
-}*/
 
+/*
 void recorreBanda(Lista<Punto> &l, Punto &p1, Punto &p2, double &d)
 {
     double distancia_minima= DBL_MAX;
@@ -126,7 +122,7 @@ void recorreBanda(Lista<Punto> &l, Punto &p1, Punto &p2, double &d)
 
     }
 }
-
+*/
 
 // Dadas tres soluciones , cada una consistente en un par de puntos y su
 // distancia , devuelve el par mas cercano de los tres y su distancia .
@@ -197,14 +193,15 @@ Solucion solucionDirecta(Lista<Punto> &l, int n)
     Solucion s1;
 
     // Antonio: cambiarlo a iteradores
-    for(int i=0; i < n; i++)
+    Lista<Punto>::Iterador it = l.principio();
+    while (it  != l.final())
     {
-        p1=l.elem(i);
-
-        for(int j=i+1; j < n ; j++)
+        p1=it.elem();
+        it.avanza();
+        Lista<Punto>::Iterador it2 = it;
+        while (it2  != l.final())
         {
-
-            p2=l.elem(j);
+            p2=it2.elem();
             p1aux= pow(p1.x-p2.x,2);
             p2aux= pow(p1.y-p2.y,2);
             aux= sqrt(p1aux+p2aux);
@@ -215,21 +212,24 @@ Solucion solucionDirecta(Lista<Punto> &l, int n)
                 s1.p2=p2;
                 s1.delta=aux;
             }
+            it2.avanza();
         }
+
     }
-    s1.lista=l;
+    s1.lista.ponDr(s1.p1);
+    s1.lista.ponDr(s1.p2);
     return s1;
 }
 
 
 // Antonio: pasar puntos por referencia
-Solucion parMasCercano(Lista<Punto> &puntos, int n)
+Solucion parMasCercano(Lista<Punto> &puntos, int n,int umbral)
 {
     Solucion sol;
     Punto p1;
     Punto p2;
     double dist;
-    if (n <= 3)   // Casos base
+    if (n <= umbral)   // Casos base
     {
         sol = solucionDirecta(puntos,n);
         OrdenacionMergeSort(sol.lista,menorY);
@@ -243,15 +243,19 @@ Solucion parMasCercano(Lista<Punto> &puntos, int n)
         int m2 = n - m1;
 
         // Antonio: devolver las dos listas con una única llamada
-        Lista<Punto> I = partirLista(puntos,0,m1-1);
-        Lista<Punto> D = partirLista(puntos,m1,n-1);
+       /* Lista<Punto> I = partirLista(puntos,0,m1-1);
+        Lista<Punto> D = partirLista(puntos,m1,n-1);*/
         // Resolvemos recursivamente las dos nubes
+        Lista<Punto> I , D;
 
-        Solucion sol1 = parMasCercano(I,m1);
-        Solucion sol2 = parMasCercano(D,m2);
+        partirListam(puntos,m1,I,D);
+
+
+        Solucion sol1 = parMasCercano(I,I.numElems(),umbral);
+        Solucion sol2 = parMasCercano(D,D.numElems(),umbral);
 
         // Calculamos la coordenada x de la linea divisoria
-        double xl = (I.primero().x + D.primero().x) / 2;
+        double xl = (I.ultimo().x + D.primero().x) / 2;
 
         // Ordenamos por la coordenada y la nube de puntos
         Lista<Punto> lista = mezcla(sol1.lista,sol2.lista,menorY);

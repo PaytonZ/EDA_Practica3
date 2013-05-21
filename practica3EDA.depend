@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1368799864 source:d:\mis documentos\github\practica3eda\main.cpp
+1368921984 source:d:\mis documentos\github\practica3eda\main.cpp
 	<string>
 	"pareja.h"
 	"faux.h"
@@ -20,10 +20,10 @@
 	<string>
 	<iosfwd>
 
-1368800339 d:\mis documentos\github\practica3eda\faux.h
+1368921942 d:\mis documentos\github\practica3eda\faux.h
 	"pareja.h"
 
-1368800659 source:d:\mis documentos\github\practica3eda\faux.cpp
+1368921922 source:d:\mis documentos\github\practica3eda\faux.cpp
 	<string>
 	"pareja.h"
 	"faux.h"
@@ -35,7 +35,7 @@
 	<math.h>
 	"mezcla.h"
 
-1368799588 d:\mis documentos\github\practica3eda\mezcla.h
+1368921140 d:\mis documentos\github\practica3eda\mezcla.h
 	<string>
 	<stdlib.h>
 	<time.h>
@@ -44,7 +44,7 @@
 	<cmath>
 	"faux.h"
 
-1368799682 source:d:\mis documentos\github\practica3eda\mezcla.cpp
+1368921346 source:d:\mis documentos\github\practica3eda\mezcla.cpp
 	<string>
 	<stdlib.h>
 	<time.h>
