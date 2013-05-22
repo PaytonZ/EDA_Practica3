@@ -33,7 +33,7 @@ int main()
 
         s1=inicioAlgoritmoDirecto(lista_de_puntos);
 
-        OrdenacionMergeSort(lista_de_puntos,menorigualX);
+        
 
         s2=inicioAlgoritmoDYV(lista_de_puntos);
 
@@ -75,8 +75,10 @@ Solucion inicioAlgoritmoDYV(Lista<Punto> &lista_de_puntos)
     clock_t tiempoInicio1;
     clock_t tiempoFinal1;
     float tiempo;
-
+    
+   
     tiempoInicio1=clock();
+    OrdenacionMergeSort(lista_de_puntos,menorigualX);
     Solucion s2 = parMasCercano(lista_de_puntos,MAX_PUNTOS,5);
     tiempoFinal1=clock();
 
