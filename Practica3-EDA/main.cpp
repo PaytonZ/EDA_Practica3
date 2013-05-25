@@ -11,7 +11,7 @@
 #include "humbral.h"
 
 
-#define MAX_PUNTOS 5000
+#define MAX_PUNTOS 500
 using namespace std;
 
 Solucion inicioAlgoritmoDirecto(Lista<Punto> &lista_de_puntos);
