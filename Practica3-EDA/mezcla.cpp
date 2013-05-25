@@ -1,10 +1,10 @@
 
 #include <string>
-#include<stdlib.h>
-#include<time.h>
+#include <stdlib.h>
+#include <time.h>
 #include <iostream>
 #include <cfloat>
-#include <math.h>
+#include <cmath>
 #include "faux.h"
 #include "mezcla.h"
 
@@ -72,27 +72,27 @@ Lista<Punto> mezcla(Lista<Punto> &l1, Lista<Punto> &l2, Comparador menor)
 
 
 
-void mergeSort(Punto array_puntos[], int a, int b)
+void mergeSort(Punto array_puntos[], int a, int b,Comparador menor)
 {
     int m;
     if (a < b)
     {
         m = (a + b) / 2;
-        mergeSort(array_puntos, a, m);
-        mergeSort(array_puntos, m + 1, b);
-        mezclam(array_puntos, a, m, b,menorigualX);
+        mergeSort(array_puntos, a, m,menor);
+        mergeSort(array_puntos, m + 1, b,menor);
+        mezclam(array_puntos, a, m, b,menor);
     }
 }
 
 
-void OrdenacionMergeSort(Lista<Punto> &l)
+void OrdenacionMergeSort(Lista<Punto> &l,Comparador menor)
 {
 
     Punto array_puntos[l.numElems()];
     deListaAarray(l,array_puntos);
 
 
-    mergeSort(array_puntos, 0, l.numElems());
+    mergeSort(array_puntos, 0, l.numElems()-1,menor);
 
     deArrayALista(l,array_puntos);
 }
@@ -119,10 +119,8 @@ void deListaAarray(Lista<Punto> &l, Punto array_puntos[])
 void deArrayALista(Lista<Punto> &l, Punto array_puntos[])
 {
     int n= l.numElems();
-    
     Lista<Punto> lista_de_puntos;
-    
-    for(int i=0; i < n; i++)
+    for(int i=0; i<n; i++)
     {
         lista_de_puntos.ponDr(array_puntos[i]);
     }
@@ -179,6 +177,29 @@ Lista<Punto> partirLista(Lista<Punto> &original, int a , int b)
     assert(lista_nueva.numElems()>0);
     return lista_nueva;
 }
+
+void partirListam(Lista<Punto> &original, int medio , Lista<Punto> &izquierda , Lista<Punto> &derecha)
+{
+
+    Lista<Punto>::Iterador it = original.principio();
+    int i=0;
+
+    while (it != original.final() && i < medio)
+    {
+        i++;
+        izquierda.ponDr(it.elem());
+        it.avanza();
+    }
+    while (it!= original.final())
+    {
+        derecha.ponDr(it.elem());
+        it.avanza();
+    }
+    assert(izquierda.numElems()>0);
+
+
+}
+
 /*
 Lista<Punto> partirListam(Lista<Punto> &original,int medio)
 {

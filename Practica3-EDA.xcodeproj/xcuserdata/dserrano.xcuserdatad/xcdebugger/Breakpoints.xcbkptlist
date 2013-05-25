@@ -12,9 +12,7 @@
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "52"
-         endingLineNumber = "52"
-         landmarkName = "mezcla(Lista&lt;Punto&gt; &amp;l1, Lista&lt;Punto&gt; &amp;l2, Comparador menor)"
-         landmarkType = "7">
+         endingLineNumber = "52">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
@@ -25,8 +23,32 @@
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "93"
-         endingLineNumber = "93"
-         landmarkName = "mergeSort(Lista&lt;Punto&gt; &amp;lista,int a, int b)"
+         endingLineNumber = "93">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Practica3-EDA/humbral.cpp"
+         timestampString = "391205184.372725"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "32"
+         endingLineNumber = "32"
+         landmarkName = "humbral()"
+         landmarkType = "7">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Practica3-EDA/humbral.cpp"
+         timestampString = "391205184.372725"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "64"
+         endingLineNumber = "64"
+         landmarkName = "humbral()"
          landmarkType = "7">
       </FileBreakpoint>
    </FileBreakpoints>

@@ -8,17 +8,22 @@
 #include <iostream>
 #include "mezcla.h"
 #include "dyv.h"
+#include "humbral.h"
 
 
-#define MAX_PUNTOS 20
+#define MAX_PUNTOS 5000
 using namespace std;
 
 Solucion inicioAlgoritmoDirecto(Lista<Punto> &lista_de_puntos);
-Solucion inicioAlgoritmoDYV(Lista<Punto> &lista_de_puntos);
+Solucion inicioAlgoritmoDYV(Lista<Punto> &lista_de_puntos, int humbral);
 
 
 int main()
 {
+    // Cálculo experimental de un humbral para el caso directo.
+    int humb = humbral(MAX_PUNTOS);
+    cout << "Supuesto humbral " << humb << endl;
+    
     //Inicialiacion de una semilla para generar numeros aleatorios
     srand(time(NULL));
     int casos_correctos=0;
@@ -35,13 +40,14 @@ int main()
 
         
 
-        s2=inicioAlgoritmoDYV(lista_de_puntos);
+        s2=inicioAlgoritmoDYV(lista_de_puntos, humb);
 
 
         if(iguales(s1,s2)) casos_correctos++;
 
     }
     cout << "TEST : " << casos_correctos *100/casos_totales  << "%" << endl;
+    
     return 0;
 }
 
@@ -70,7 +76,7 @@ Solucion inicioAlgoritmoDirecto(Lista<Punto> &lista_de_puntos)
     return s1;
 }
 
-Solucion inicioAlgoritmoDYV(Lista<Punto> &lista_de_puntos)
+Solucion inicioAlgoritmoDYV(Lista<Punto> &lista_de_puntos, int humbral)
 {
     clock_t tiempoInicio1;
     clock_t tiempoFinal1;
@@ -79,7 +85,7 @@ Solucion inicioAlgoritmoDYV(Lista<Punto> &lista_de_puntos)
    
     tiempoInicio1=clock();
     OrdenacionMergeSort(lista_de_puntos,menorigualX);
-    Solucion s2 = parMasCercano(lista_de_puntos,MAX_PUNTOS,5);
+    Solucion s2 = parMasCercano(lista_de_puntos,MAX_PUNTOS, humbral);
     tiempoFinal1=clock();
 
     cout << "-----DYV" << endl;
