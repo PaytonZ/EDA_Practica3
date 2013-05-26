@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3E1A0A5F17415C160087C57E /* mezcla.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A0A5E17415C160087C57E /* mezcla.cpp */; };
-		FB58708417513468009C9EC6 /* humbral.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB58708217513467009C9EC6 /* humbral.cpp */; };
 		FB587087175135D7009C9EC6 /* dyv.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB587086175135D7009C9EC6 /* dyv.cpp */; };
+		FB963A8217525D19009E327B /* umbral.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB963A8117525D19009E327B /* umbral.cpp */; };
 		FBBF669117355D0E002AD31D /* Practica3_EDA.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = FBBF669017355D0E002AD31D /* Practica3_EDA.1 */; };
 		FBBF669817355F15002AD31D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FBBF669717355F15002AD31D /* main.cpp */; };
 		FBBF66A917355F8B002AD31D /* faux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FBBF66A817355F8B002AD31D /* faux.cpp */; };
@@ -30,10 +30,10 @@
 
 /* Begin PBXFileReference section */
 		3E1A0A5E17415C160087C57E /* mezcla.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mezcla.cpp; sourceTree = "<group>"; };
-		FB58708217513467009C9EC6 /* humbral.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = humbral.cpp; sourceTree = "<group>"; };
 		FB587085175135CF009C9EC6 /* dyv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dyv.h; sourceTree = "<group>"; };
 		FB587086175135D7009C9EC6 /* dyv.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dyv.cpp; sourceTree = "<group>"; };
-		FB58708817513864009C9EC6 /* humbral.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = humbral.h; sourceTree = "<group>"; };
+		FB963A8017525C5C009E327B /* umbral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = umbral.h; sourceTree = "<group>"; };
+		FB963A8117525D19009E327B /* umbral.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = umbral.cpp; sourceTree = "<group>"; };
 		FBBF668B17355D0E002AD31D /* Practica3-EDA */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Practica3-EDA"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBBF669017355D0E002AD31D /* Practica3_EDA.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Practica3_EDA.1; sourceTree = "<group>"; };
 		FBBF669717355F15002AD31D /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -89,8 +89,8 @@
 				3E1A0A5E17415C160087C57E /* mezcla.cpp */,
 				FBBF66A817355F8B002AD31D /* faux.cpp */,
 				FB587086175135D7009C9EC6 /* dyv.cpp */,
+				FB963A8117525D19009E327B /* umbral.cpp */,
 				FBBF669017355D0E002AD31D /* Practica3_EDA.1 */,
-				FB58708217513467009C9EC6 /* humbral.cpp */,
 			);
 			path = "Practica3-EDA";
 			sourceTree = "<group>";
@@ -98,6 +98,7 @@
 		FBBF669917355F18002AD31D /* headers */ = {
 			isa = PBXGroup;
 			children = (
+				FB963A8017525C5C009E327B /* umbral.h */,
 				FB587085175135CF009C9EC6 /* dyv.h */,
 				FBBF66A517355F7E002AD31D /* faux.h */,
 				FBBF66A617355F7E002AD31D /* mezcla.h */,
@@ -113,7 +114,6 @@
 				FBBF66A217355F70002AD31D /* Pila.h */,
 				FBBF66A317355F70002AD31D /* PilaLE.h */,
 				FBBF66A417355F70002AD31D /* Tabla.h */,
-				FB58708817513864009C9EC6 /* humbral.h */,
 			);
 			name = headers;
 			sourceTree = "<group>";
@@ -172,8 +172,8 @@
 				FBBF669817355F15002AD31D /* main.cpp in Sources */,
 				FBBF66A917355F8B002AD31D /* faux.cpp in Sources */,
 				3E1A0A5F17415C160087C57E /* mezcla.cpp in Sources */,
-				FB58708417513468009C9EC6 /* humbral.cpp in Sources */,
 				FB587087175135D7009C9EC6 /* dyv.cpp in Sources */,
+				FB963A8217525D19009E327B /* umbral.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

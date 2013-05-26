@@ -8,7 +8,7 @@
 #include <iostream>
 #include "mezcla.h"
 #include "dyv.h"
-#include "humbral.h"
+#include "umbral.h"
 
 
 #define MAX_PUNTOS 5000
