@@ -15,16 +15,6 @@
 		FBBF66A917355F8B002AD31D /* faux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FBBF66A817355F8B002AD31D /* faux.cpp */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		FBE3641717554FEC00A02984 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FBE3641317554FE900A02984 /* comparativa.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FBE3640717554FE800A02984;
-			remoteInfo = comparativa;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		FBBF668917355D0E002AD31D /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -62,7 +52,6 @@
 		FBBF66A617355F7E002AD31D /* mezcla.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mezcla.h; sourceTree = "<group>"; };
 		FBBF66A717355F7E002AD31D /* pareja.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pareja.h; sourceTree = "<group>"; };
 		FBBF66A817355F8B002AD31D /* faux.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = faux.cpp; sourceTree = "<group>"; };
-		FBE3641317554FE900A02984 /* comparativa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = comparativa.xcodeproj; path = comparativa/comparativa.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +80,6 @@
 		FBBF668217355D0E002AD31D = {
 			isa = PBXGroup;
 			children = (
-				FBE3641317554FE900A02984 /* comparativa.xcodeproj */,
 				FBBF668D17355D0E002AD31D /* Practica3-EDA */,
 				FBBF668C17355D0E002AD31D /* Products */,
 			);
@@ -138,14 +126,6 @@
 			name = headers;
 			sourceTree = "<group>";
 		};
-		FBE3641417554FE900A02984 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FBE3641817554FEC00A02984 /* comparativa */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -185,28 +165,12 @@
 			mainGroup = FBBF668217355D0E002AD31D;
 			productRefGroup = FBBF668C17355D0E002AD31D /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = FBE3641417554FE900A02984 /* Products */;
-					ProjectRef = FBE3641317554FE900A02984 /* comparativa.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				FBBF668A17355D0E002AD31D /* Practica3-EDA */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		FBE3641817554FEC00A02984 /* comparativa */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = comparativa;
-			remoteRef = FBE3641717554FEC00A02984 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FBBF668717355D0E002AD31D /* Sources */ = {

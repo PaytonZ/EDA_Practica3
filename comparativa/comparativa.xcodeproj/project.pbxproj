@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB7B0F4B17577CDD00A495AB /* dyv.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB7B0F4717577CDD00A495AB /* dyv.cpp */; };
+		FB7B0F4C17577CDD00A495AB /* faux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB7B0F4817577CDD00A495AB /* faux.cpp */; };
+		FB7B0F4D17577CDD00A495AB /* mezcla.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB7B0F4917577CDD00A495AB /* mezcla.cpp */; };
+		FB7B0F4E17577CDD00A495AB /* umbral.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB7B0F4A17577CDD00A495AB /* umbral.cpp */; };
 		FBE3640B17554FE800A02984 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FBE3640A17554FE800A02984 /* main.cpp */; };
 		FBE3640D17554FE900A02984 /* comparativa.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = FBE3640C17554FE900A02984 /* comparativa.1 */; };
 /* End PBXBuildFile section */
@@ -25,6 +29,26 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FB7B0F3717577C9200A495AB /* Arbin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arbin.h; sourceTree = "<group>"; };
+		FB7B0F3817577C9200A495AB /* ArbinConCopias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArbinConCopias.h; sourceTree = "<group>"; };
+		FB7B0F3917577C9200A495AB /* Arbus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arbus.h; sourceTree = "<group>"; };
+		FB7B0F3A17577C9200A495AB /* Cola.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cola.h; sourceTree = "<group>"; };
+		FB7B0F3B17577C9200A495AB /* DCola.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCola.h; sourceTree = "<group>"; };
+		FB7B0F3C17577C9200A495AB /* dyv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dyv.h; sourceTree = "<group>"; };
+		FB7B0F3D17577C9200A495AB /* Excepciones.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Excepciones.h; sourceTree = "<group>"; };
+		FB7B0F3E17577C9200A495AB /* faux.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = faux.h; sourceTree = "<group>"; };
+		FB7B0F3F17577C9200A495AB /* Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hash.h; sourceTree = "<group>"; };
+		FB7B0F4017577C9200A495AB /* Lista.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lista.h; sourceTree = "<group>"; };
+		FB7B0F4117577C9200A495AB /* mezcla.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mezcla.h; sourceTree = "<group>"; };
+		FB7B0F4217577C9200A495AB /* pareja.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pareja.h; sourceTree = "<group>"; };
+		FB7B0F4317577C9200A495AB /* Pila.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pila.h; sourceTree = "<group>"; };
+		FB7B0F4417577C9200A495AB /* PilaLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PilaLE.h; sourceTree = "<group>"; };
+		FB7B0F4517577C9200A495AB /* Tabla.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tabla.h; sourceTree = "<group>"; };
+		FB7B0F4617577C9200A495AB /* umbral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = umbral.h; sourceTree = "<group>"; };
+		FB7B0F4717577CDD00A495AB /* dyv.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dyv.cpp; sourceTree = "<group>"; };
+		FB7B0F4817577CDD00A495AB /* faux.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = faux.cpp; sourceTree = "<group>"; };
+		FB7B0F4917577CDD00A495AB /* mezcla.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mezcla.cpp; sourceTree = "<group>"; };
+		FB7B0F4A17577CDD00A495AB /* umbral.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = umbral.cpp; sourceTree = "<group>"; };
 		FBE3640717554FE800A02984 /* comparativa */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = comparativa; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBE3640A17554FE800A02984 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		FBE3640C17554FE900A02984 /* comparativa.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = comparativa.1; sourceTree = "<group>"; };
@@ -41,9 +65,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB7B0F3617577C3D00A495AB /* headers */ = {
+			isa = PBXGroup;
+			children = (
+				FB7B0F3717577C9200A495AB /* Arbin.h */,
+				FB7B0F3817577C9200A495AB /* ArbinConCopias.h */,
+				FB7B0F3917577C9200A495AB /* Arbus.h */,
+				FB7B0F3A17577C9200A495AB /* Cola.h */,
+				FB7B0F3B17577C9200A495AB /* DCola.h */,
+				FB7B0F3C17577C9200A495AB /* dyv.h */,
+				FB7B0F3D17577C9200A495AB /* Excepciones.h */,
+				FB7B0F3E17577C9200A495AB /* faux.h */,
+				FB7B0F3F17577C9200A495AB /* Hash.h */,
+				FB7B0F4017577C9200A495AB /* Lista.h */,
+				FB7B0F4117577C9200A495AB /* mezcla.h */,
+				FB7B0F4217577C9200A495AB /* pareja.h */,
+				FB7B0F4317577C9200A495AB /* Pila.h */,
+				FB7B0F4417577C9200A495AB /* PilaLE.h */,
+				FB7B0F4517577C9200A495AB /* Tabla.h */,
+				FB7B0F4617577C9200A495AB /* umbral.h */,
+			);
+			name = headers;
+			sourceTree = "<group>";
+		};
 		FBE363FE17554FE800A02984 = {
 			isa = PBXGroup;
 			children = (
+				FB7B0F3617577C3D00A495AB /* headers */,
 				FBE3640917554FE800A02984 /* comparativa */,
 				FBE3640817554FE800A02984 /* Products */,
 			);
@@ -60,6 +108,10 @@
 		FBE3640917554FE800A02984 /* comparativa */ = {
 			isa = PBXGroup;
 			children = (
+				FB7B0F4717577CDD00A495AB /* dyv.cpp */,
+				FB7B0F4817577CDD00A495AB /* faux.cpp */,
+				FB7B0F4917577CDD00A495AB /* mezcla.cpp */,
+				FB7B0F4A17577CDD00A495AB /* umbral.cpp */,
 				FBE3640A17554FE800A02984 /* main.cpp */,
 				FBE3640C17554FE900A02984 /* comparativa.1 */,
 			);
@@ -118,6 +170,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBE3640B17554FE800A02984 /* main.cpp in Sources */,
+				FB7B0F4B17577CDD00A495AB /* dyv.cpp in Sources */,
+				FB7B0F4C17577CDD00A495AB /* faux.cpp in Sources */,
+				FB7B0F4D17577CDD00A495AB /* mezcla.cpp in Sources */,
+				FB7B0F4E17577CDD00A495AB /* umbral.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +272,7 @@
 				FBE3641217554FE900A02984 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

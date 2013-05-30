@@ -16,48 +16,29 @@
 using namespace std;
 
 void compararDVpuroConDVcompuesto(float tiempoPuro, float tiempoCompuesto, int numeroPuntos, int umbral);
+void calculoTiempo(int puntos, int umbral);
 
 int main(int argc, const char * argv[]) {
 
-    int puntos = 10;
-    int umbral = 15;
+    int puntos = 2;
+    int umbral = 10;
     
     while ( puntos <= 20000) {
         
-        clock_t tiempoInicioDVpuro;
-        clock_t tiempoFinalDVpuro;
-        float tiempoDVpuro;
-        
-        clock_t tiempoInicioDVcompuesto;
-        clock_t tiempoFinalDVcompuesto;
-        float tiempoDVcompuesto;
-            
-        Lista<Punto> lista_de_puntos = generarListaDePuntos(puntos);
-        
-        tiempoInicioDVpuro = clock();
-        
-        OrdenacionMergeSort(lista_de_puntos, menorigualX);
-        parMasCercano(lista_de_puntos, puntos, 0);
-        
-        tiempoFinalDVpuro = clock();
-        
-        tiempoDirecto = ((float) (tiempoFinalDVpuro - tiempoInicioDVpuro)) / CLOCKS_PER_SEC;
-        
-        //lista_de_puntos = generarListaDePuntos(puntos);
-        
-        tiempoInicioDV = clock();
-        
-        OrdenacionMergeSort(lista_de_puntos, menorigualX);
-        parMasCercano(lista_de_puntos, numero_de_puntos, umbral);
-        
-        tiempoFinalDVcompuesto = clock();
-        
-        tiempoDVcompuesto = ((float) (tiempoFinalDVcompuesto - tiempoInicioDVcompuesto)) / CLOCKS_PER_SEC;
-        
-        compararDVpuroConDVcompuesto(tiempoDVpuro, tiempoDVcompuesto, puntos, umbral);
+        calculoTiempo(puntos, 1);
         
         // Decremento el nº de puntos.
-        numero_de_puntos *= 10;
+        puntos *= 2;
+    }
+    
+    puntos = 2;
+    
+    while ( puntos <= 20000) {
+        
+        calculoTiempo(puntos, umbral);
+        
+        // Decremento el nº de puntos.
+        puntos *= 2;
         umbral += 10;
     }
     
@@ -69,4 +50,39 @@ void compararDVpuroConDVcompuesto(float tiempoPuro, float tiempoCompuesto, int n
     cout << "ALGORITMO PURO: " << tiempoPuro << " con número de puntos: " << numeroPuntos << endl;
     
     cout << "ALGORITMO COMPUESTO: " << tiempoCompuesto << " con número de puntos: " << numeroPuntos << " y umbral: " << umbral << endl << endl;
+}
+
+void calculoTiempo(int puntos, int umbral) {
+    
+    clock_t tiempoInicioDVpuro;
+    clock_t tiempoFinalDVpuro;
+    float tiempoDVpuro;
+    
+    clock_t tiempoInicioDVcompuesto;
+    clock_t tiempoFinalDVcompuesto;
+    float tiempoDVcompuesto;
+    
+    Lista<Punto> lista_de_puntos = generarListaDePuntos(puntos);
+    
+    tiempoInicioDVpuro = clock();
+    
+    OrdenacionMergeSort(lista_de_puntos, menorigualX);
+    parMasCercano(lista_de_puntos, puntos, 1);
+    
+    tiempoFinalDVpuro = clock();
+    
+    tiempoDVpuro = ((float) (tiempoFinalDVpuro - tiempoInicioDVpuro)) / CLOCKS_PER_SEC;
+    
+    //lista_de_puntos = generarListaDePuntos(puntos);
+    
+    tiempoInicioDVcompuesto = clock();
+    
+    OrdenacionMergeSort(lista_de_puntos, menorigualX);
+    parMasCercano(lista_de_puntos, puntos, umbral);
+    
+    tiempoFinalDVcompuesto = clock();
+    
+    tiempoDVcompuesto = ((float) (tiempoFinalDVcompuesto - tiempoInicioDVcompuesto)) / CLOCKS_PER_SEC;
+    
+    compararDVpuroConDVcompuesto(tiempoDVpuro, tiempoDVcompuesto, puntos, umbral);
 }
